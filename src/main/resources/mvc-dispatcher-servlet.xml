@@ -5,26 +5,28 @@
        xmlns:task="http://www.springframework.org/schema/task"
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-      http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+      http://www.springframework.org/schema/beans/spring-beans.xsd
       http://www.springframework.org/schema/context
       http://www.springframework.org/schema/context/spring-context.xsd
       http://www.springframework.org/schema/mvc
-      http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+      http://www.springframework.org/schema/mvc/spring-mvc.xsd
       http://www.springframework.org/schema/aop
-      http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+      http://www.springframework.org/schema/aop/spring-aop.xsd
       http://www.springframework.org/schema/task
-      http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+      http://www.springframework.org/schema/task/spring-task.xsd">
+
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <mvc:annotation-driven>
         <mvc:message-converters>
             <bean class="org.springframework.http.converter.json.GsonHttpMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
+
     <mvc:resources location="/js/" mapping="/js/**" cache-period="2592000"/>
     <mvc:resources location="/css/" mapping="/css/**" cache-period="2592000"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/pages/"/>
+        <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
     <bean class="com.gs.spider.gather.commons.CommonSpider" name="commonSpider">
@@ -47,6 +49,7 @@
             </list>
         </property>
     </bean>
+
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <array>
@@ -54,6 +57,7 @@
         </property>
         <property name="fileEncoding" value="utf-8"/>
     </bean>
+
     <bean id="schedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean"/>
     <task:executor id="executor" pool-size="5"/>
     <task:scheduler id="scheduler" pool-size="10"/>

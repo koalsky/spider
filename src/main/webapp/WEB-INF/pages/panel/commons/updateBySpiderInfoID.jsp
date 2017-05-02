@@ -50,7 +50,7 @@
     </script>
 </head>
 <body>
-<%@include file="../../commons/head.jsp" %>
+<%@include file="../../commons/nav.jsp" %>
 <div class="container">
     <form id="updateForm">
         <div class="form-group">

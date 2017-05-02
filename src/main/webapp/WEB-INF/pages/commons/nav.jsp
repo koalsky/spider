@@ -98,27 +98,51 @@
     </div><!-- /.modal-dialog -->
 </div>
 
-<div class="container">
-    <nav class="navbar navbar-dark bg-primary">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}/">数据采集平台</a>
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                   aria-expanded="false">普通网页抓取</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/panel/commons/list">搜索</a>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/panel/commons/domainList">网站列表</a>
-                    <a class="dropdown-item" href="${pageContext.request.contextPath}/panel/commons/tasks">查看进度</a>
-                    <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/panel/commons/editSpiderInfo">编辑模板</a>
-                    <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/panel/commons/listSpiderInfo">模板列表</a>
-                    <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/panel/commons/updateBySpiderInfoID">更新数据</a>
-                    <a class="dropdown-item"
-                       href="${pageContext.request.contextPath}/panel/commons/listQuartz">定时任务管理</a>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</div>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="${pageContext.request.contextPath}/">木辛数据采集平台</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <%--<li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>--%>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/list">搜索</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/domainList">网站列表</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/tasks">查看进度</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/editSpiderInfo">编辑模板</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/listSpiderInfo">模板列表</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/updateBySpiderInfoID">更新数据</a>
+                <li>
+                <li><a href="${pageContext.request.contextPath}/panel/commons/listQuartz">定时任务管理</a>
+                <li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">联系我们</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">更多 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">修改邮箱</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

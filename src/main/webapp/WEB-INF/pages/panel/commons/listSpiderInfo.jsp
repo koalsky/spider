@@ -49,7 +49,7 @@
     </script>
 </head>
 <body>
-<%@include file="../../commons/head.jsp" %>
+<%@include file="../../commons/nav.jsp" %>
 <div class="container">
     <form class="form-inline" id="spiderInfoForm"
           action="${pageContext.request.contextPath}/panel/commons/listSpiderInfo">

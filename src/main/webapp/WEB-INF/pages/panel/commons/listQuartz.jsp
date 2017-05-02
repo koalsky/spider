@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<%@include file="../../commons/head.jsp" %>
+<%@include file="../../commons/nav.jsp" %>
 <div class="container">
     <div class="row">
         <table>

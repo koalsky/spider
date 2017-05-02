@@ -15,7 +15,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
-                <version>4.1.9.RELEASE</version>
+                <version>4.3.6.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -255,18 +255,18 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-maven-plugin</artifactId>
-                <version>9.4.1.v20170120</version>
-                <configuration>
-                    <httpConnector>
-                        <port>8081</port>
-                        <host>localhost</host>
-                    </httpConnector>
-                    <scanIntervalSeconds>1</scanIntervalSeconds>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.eclipse.jetty</groupId>-->
+                <!--<artifactId>jetty-maven-plugin</artifactId>-->
+                <!--<version>9.4.1.v20170120</version>-->
+                <!--<configuration>-->
+                    <!--<httpConnector>-->
+                        <!--<port>8081</port>-->
+                        <!--<host>localhost</host>-->
+                    <!--</httpConnector>-->
+                    <!--<scanIntervalSeconds>1</scanIntervalSeconds>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
         <finalName>spider</finalName>
     </build>

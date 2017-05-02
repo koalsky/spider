@@ -15,7 +15,7 @@
     <title>定时网页抓取任务创建</title>
     <%@include file="../../commons/header.jsp" %>
 </head>
-<%@include file="../../commons/head.jsp" %>
+<%@include file="../../commons/nav.jsp" %>
 <body>
 <div class="container">
     <div class="row">

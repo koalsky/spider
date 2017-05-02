@@ -1,7 +1,31 @@
 /**
  * Created by gaoshen on 16/5/17.
  */
- var needShowResultModel = false;
+
+
+$(function () {
+    //表单验证  默认验证配置参数
+    $.validator.setDefaults({
+        highlight: function (e) {
+            $(e).closest(".form-group>div").removeClass("has-success").addClass("has-error")
+        },
+        success: function (e) {
+            e.closest(".form-group>div").removeClass("has-error").addClass("has-success")
+        },
+        errorElement: "span",
+        errorPlacement: function (e, r) {
+            e.appendTo(r.is(":radio") || r.is(":checkbox") ? r.parent().parent().parent() : r.parent())
+        },
+        errorClass: "help-block text text-danger",
+        validClass: "help-block text text-success",
+        //debug: false, //调试模式取消submit的默认提交功能
+        //errorClass: "label.error", //默认为错误的样式类为：error
+        focusInvalid: true, //当为false时，验证无效时，没有焦点响应
+        onkeyup: false
+    });
+});
+
+var needShowResultModel = false;
 function showModal(title, content, cancelAction, confirmAction) {
     $("#confirmModalTitle").text(title);
     $("#confirmModalBody").html(content);

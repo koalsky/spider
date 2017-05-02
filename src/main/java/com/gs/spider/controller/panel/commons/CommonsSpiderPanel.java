@@ -102,11 +102,7 @@ public class CommonsSpiderPanel extends BaseController {
         ResultBundle<Long> runningTaskCount = commonsSpiderService.countByState(State.RUNNING);
         modelAndView.addObject("resultBundle", listBundle);
         modelAndView.addObject("runningTaskCount", runningTaskCount.getResult());
-        modelAndView.addObject("spiderInfoList", listBundle.getResultList().stream()
-                .map(task -> StringEscapeUtils.escapeHtml4(
-                        gson.toJson(task.getExtraInfoByKey("spiderInfo")
-                        ))
-                ).collect(Collectors.toList()));
+        modelAndView.addObject("spiderInfoList", listBundle.getResultList().stream().map(task -> StringEscapeUtils.escapeHtml4(gson.toJson(task.getExtraInfoByKey("spiderInfo")))).collect(Collectors.toList()));
         return modelAndView;
     }
 

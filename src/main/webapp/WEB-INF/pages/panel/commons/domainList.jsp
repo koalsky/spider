@@ -13,9 +13,10 @@
     <%@include file="../../commons/header.jsp" %>
 </head>
 <body>
-<%@include file="../../commons/head.jsp" %>
+<%@include file="../../commons/nav.jsp" %>
 <div class="container">
-    <table class="table table-hover">
+    <div class="row table-responsive">
+    <table class="table table-hover table-bordered">
         <thead>
         <tr>
             <th>#</th>
@@ -45,6 +46,7 @@
         </c:forEach>
         </tbody>
     </table>
+    </div>
 </div>
 <div class="container" id="wordCloudBody" style="height:400px"></div>
 </body>

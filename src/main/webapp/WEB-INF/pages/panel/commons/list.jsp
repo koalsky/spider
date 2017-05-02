@@ -65,27 +65,42 @@
     </script>
 </head>
 <body>
-<%@include file="../../commons/head.jsp" %>
-<div class="container">
-    <form class="form-inline" id="webpageForm" action="${pageContext.request.contextPath}/panel/commons/list">
-        <div class="form-group">
-            <label for="query">关键词:</label>
-            <input class="form-control" id="query" name="query" value="${query}">
-        </div>
-        <div class="form-group">
-            <label for="page">页码:</label>
-            <input class="form-control" type="number" id="page" name="page" value="${page}">
-        </div>
-        <div class="form-group">
-            <label for="domain">域名:</label>
-            <input class="form-control" id="domain" name="domain" value="${domain}">
-        </div>
-        <button type="submit" class="btn btn-primary" id="priceSubmit">搜索</button>
-    </form>
-</div>
+<%@include file="../../commons/nav.jsp" %>
 <div class="container">
     <div class="row">
-        <table class="table table-hover">
+    <div class="panel panel-info">
+        <div class="panel-body bg-info">
+            <form class="form-inline" id="webpageForm" action="${pageContext.request.contextPath}/panel/commons/list">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="query">关键词：</label>
+                        <input type="text" class="form-control" id="query" name="query" value="${query}"
+                               placeholder="关键词">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label" for="domain">域名：</label>
+                        <input class="form-control" id="domain" name="domain" value="${domain}" placeholder="域名">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label class="control-label" for="page">页码：</label>
+                        <input class="form-control" type="number" id="page" name="page" value="${page}"
+                               placeholder="导演姓名">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                        <button type="submit" class="btn btn-primary btn-block" id="priceSubmit">搜索</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <table class="table table-hover table-bordered">
             <thead class="thead-inverse">
             <tr>
                 <th>#</th>
